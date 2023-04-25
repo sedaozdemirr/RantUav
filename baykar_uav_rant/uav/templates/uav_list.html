@@ -145,12 +145,14 @@
       method: 'GET',
       success: function(data) {
       var div = $('#uav-card')
-        var data = JSON.stringify(data);
+
+        console.log(data);
         $.each(data, function(index, uav) {
+
       var uavCard = $('<div class="col-md-6">\
                           <div class="booking-form">\
                             <div class="uav-card">\
-                              <img src="{% static '/img/background.jpg'%}" height="300px" width="300px">\
+                              <img src="' + uav.img + '" height="300px" width="300px">\
                               <h3>' + uav.brand + '</h3>\
                               <h3>' + uav.model + '</h3>\
                               <h3>' + uav.weight + '</h3>\

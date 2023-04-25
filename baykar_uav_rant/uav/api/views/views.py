@@ -11,3 +11,4 @@ class UavApiView(viewsets.ModelViewSet):
     serializer_class = UavSerializer
 
 
+
