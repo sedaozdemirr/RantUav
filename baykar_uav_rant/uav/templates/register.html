@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <!-- Design by foolishdeveloper.com -->
+    <title>Kayıt Ol</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+     <link href="{% static 'css/register.css' %}" rel="stylesheet">
+    <!--Stylesheet-->
+    <style media="screen">
+
+
+    </style>
+</head>
+<body>
+    <div class="background">
+
+    </div>
+    <form action="" method="post">
+        {% csrf_token %}
+        <h3>Kayıt Ol</h3>
+
+        <label for="username">Kullanıcı Adı</label>
+        <input type="text" placeholder="Kullanıcı Adı" name="username" id="username">
+
+        <label for="email">Email</label>
+        <input type="email" placeholder="Email" name="email" id="email">
+
+        <label for="password1">Şifre</label>
+        <input type="password" placeholder="Şifre" id="password1" name="password1">
+
+
+        <label for="password2">Şifre Tekrar</label>
+        <input type="password" placeholder="Şifre Tekrar" id="password2" name="password2">
+        <button type="submit">Kayıt Ol</button>
+
+        <a href="{% url 'login' %}" >Hesabınız mı var? Giriş Yapın</a>
+    </form>
+</body>
+</html>

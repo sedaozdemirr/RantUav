@@ -45,3 +45,5 @@ def LoginPage(request):
 def LogoutPage(request):
     logout(request)
     return redirect('login')
+def UavList(request):
+    return render(request, 'uav_list.html')
