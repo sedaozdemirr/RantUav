@@ -7,6 +7,7 @@ app_name = "api"
 router = routers.DefaultRouter()
 router.register(r'uav', UavApiView, basename="uav")
 
+
 urlpatterns = [
     path('', include(router.urls)),
 ]

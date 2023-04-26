@@ -47,3 +47,6 @@ def LogoutPage(request):
     return redirect('login')
 def UavList(request):
     return render(request, 'uav_list.html')
+
+def PutUav(request,id):
+    return render(request, 'put_uav.html',context={'id':id})

@@ -25,6 +25,7 @@ urlpatterns = [
     path('home/', views.HomePage, name='home'),
     path('logout/', views.LogoutPage, name='logout'),
     path('uavlist/', views.UavList, name='uavlist'),
+    path('putuav/<int:id>/', views.PutUav, name='putuav'),
     path('api/', include('uav.api.urls')),
 
 

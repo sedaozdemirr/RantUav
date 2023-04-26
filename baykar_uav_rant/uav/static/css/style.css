@@ -2,7 +2,10 @@
 	position: relative;
 	height: 100vh;
 }
-
+.container-fluid{
+	background-image: url('../img/background.jpg');
+	background-size: cover;
+	background-position: center;}
 .section .section-center {
 	position: absolute;
 	top: 50%;
@@ -14,15 +17,14 @@
 
 #booking {
 	font-family: 'PT Sans', sans-serif;
-	background-image: url('../img/background.jpg');
-	background-size: cover;
-	background-position: center;
+
 }
 
 .booking-form {
 	background: rgba(0, 0, 0, 0.7);
 	padding: 40px;
 	border-radius: 6px;
+
 }
 
 .booking-form .form-group {

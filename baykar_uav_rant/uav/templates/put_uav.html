@@ -80,13 +80,13 @@
                     <div class="container">
                         <div class="row">
                             <div class="booking-form">
-                                <form method="POST">
+                                <form method="POST" >
                                     {% csrf_token %}
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <span class="form-label">Marka</span>
-                                                <input id="brand" name="brand" class="form-control" type="text"
+                                                <input id="brand" name="brand" value="{{id}}" class="form-control" type="text"
                                                        placeholder="Marka">
                                             </div>
                                         </div>
@@ -142,7 +142,7 @@
                                         </div>
                                         <div class="col-md-3">
                                             <div class="form-btn">
-                                                <button id="submitBtn" onclick="" class="submit-btn">Kaydet</button>
+                                                <button id="submitBtn" onclick="" class="submit-btn">Güncelle</button>
                                             </div>
                                         </div>
                                     </div>

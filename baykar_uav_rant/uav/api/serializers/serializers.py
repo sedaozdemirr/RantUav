@@ -4,7 +4,7 @@ from uav.models import Uav,Customer,Reservation
 class UavSerializer(serializers.ModelSerializer):
     class Meta:
         model = Uav
-        fields = ('brand', 'model', 'weight', 'category', 'airtime', 'price')
+        fields = ('brand', 'model', 'weight', 'category', 'airtime', 'price','img')
 class CustomSerializer(serializers.ModelSerializer):
     class Meta:
         model = Customer
