@@ -35,38 +35,33 @@
 <body>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-sm-auto bg-light sticky-top">
+        <div class="col-sm-auto bg-light sticky-top" style="background-color: #132143">
             <div class="d-flex flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top">
 
                 <ul class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center justify-content-between w-100 px-3 align-items-center">
                     <li class="nav-item">
-                        <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
+                        <a href="{% url 'home' %} " class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
                            data-bs-placement="right" data-bs-original-title="Home">
-                            <i class="bi-house fs-1"></i>
+                            <i class="bi-house fs-1" style="color:#132143"></i>
                         </a>
                     </li>
-                    <li>
-                        <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
-                           data-bs-placement="right" data-bs-original-title="Dashboard">
-                            <i class="bi bi-save2 fs-1"></i>
-                        </a>
-                    </li>
+
                     <li>
                         <a href="{% url 'uavlist' %} " class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
                            data-bs-placement="right" data-bs-original-title="Orders">
-                            <i class="bi bi-card-list fs-1"></i>
+                            <i class="bi bi-card-list fs-1" style="color:#132143"></i>
                         </a>
                     </li>
                     <li>
                         <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
                            data-bs-placement="right" data-bs-original-title="Products">
-                            <i class="bi-heart fs-1"></i>
+                            <i class="bi bi-cart2 fs-1" style="color:#132143"></i>
                         </a>
                     </li>
                     <li>
                         <a href="{% url 'logout' %}" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
                            data-bs-placement="right" data-bs-original-title="Customers">
-                            <i class="bi bi-box-arrow-left fs-1"></i>
+                            <i class="bi bi-box-arrow-left fs-1" style="color:#132143"></i>
                         </a>
                     </li>
                 </ul>
@@ -76,6 +71,7 @@
         <div class="col-sm min-vh-100">
             <!-- content -->
             <div id="booking" class="section">
+             <div class="header-text"><h1 class="display-1">İHA KAYIT</h1></div>
                 <div class="section-center">
                     <div class="container">
                         <div class="row">

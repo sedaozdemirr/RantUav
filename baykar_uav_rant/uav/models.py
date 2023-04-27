@@ -9,7 +9,7 @@ class Customer(models.Model):
     def __str__(self):
         return self.name
 class Uav(models.Model):
-    img = models.ImageField(null=True,blank=True)
+    img = models.ImageField(null=True,blank=True,upload_to='media/')
     brand = models.CharField(max_length=255)
     model = models.CharField(max_length=255,null=True,blank=True)
     weight = models.IntegerField()

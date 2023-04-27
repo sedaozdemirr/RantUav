@@ -41,33 +41,28 @@
 
                 <ul class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center justify-content-between w-100 px-3 align-items-center">
                     <li class="nav-item">
-                        <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
+                        <a href="{% url 'home' %} " class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
                            data-bs-placement="right" data-bs-original-title="Home">
-                            <i class="bi-house fs-1"></i>
+                            <i class="bi-house fs-1" style="color:#132143"></i>
                         </a>
                     </li>
+
                     <li>
-                        <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
-                           data-bs-placement="right" data-bs-original-title="Dashboard">
-                            <i class="bi bi-save2 fs-1"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
+                        <a href="{% url 'uavlist' %} " class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
                            data-bs-placement="right" data-bs-original-title="Orders">
-                            <i class="bi bi-card-list fs-1"></i>
+                            <i class="bi bi-card-list fs-1" style="color:#132143"></i>
                         </a>
                     </li>
                     <li>
                         <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
                            data-bs-placement="right" data-bs-original-title="Products">
-                            <i class="bi-heart fs-1"></i>
+                            <i class="bi-heart fs-1" style="color:#132143"></i>
                         </a>
                     </li>
                     <li>
                         <a href="{% url 'logout' %}" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
                            data-bs-placement="right" data-bs-original-title="Customers">
-                            <i class="bi bi-box-arrow-left fs-1"></i>
+                            <i class="bi bi-box-arrow-left fs-1" style="color:#132143"></i>
                         </a>
                     </li>
                 </ul>
@@ -85,61 +80,58 @@
                         <div class="s003">
                             <form>
                                 {% csrf_token %}
-                                <div class="inner-form">
-                                    <div class="input-field first-wrap">
-                                        <div class="input-select">
-                                            <select id="brand" data-trigger="" name="choices-single-defaul">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <select class="form-select" id="brand" aria-label="Default select example"
+                                                    name="choices-single-defaul">
+                                                <option></option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-md-2">
+                                            <select class="form-select" id="model" aria-label="Default select example"
+                                                    name="choices-single-defaul">
+                                                <option></option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <select class="form-select" id="weight" aria-label="Default select example"
+                                                    name="choices-single-defaul">
+                                                <option></option>
 
                                             </select>
                                         </div>
-                                    </div>
-                                    <div class="input-field first-wrap">
-                                        <div class="input-select">
-                                            <select id="model" data-trigger="" name="choices-single-defaul">
-
+                                        <div class="col-md-2">
+                                            <select class="form-select" id="category"
+                                                    aria-label="Default select example" name="choices-single-defaul">
+                                                <option></option>
                                             </select>
                                         </div>
-                                    </div>
-                                    <div class="input-field first-wrap">
-                                        <div class="input-select">
-                                            <select id="weight" data-trigger="" name="choices-single-defaul">
-
+                                        <div class="col-md-2">
+                                            <select class="form-select" id="airtime" aria-label="Default select example"
+                                                    name="choices-single-defaul">
+                                                <option></option>
                                             </select>
                                         </div>
-                                    </div>
-                                    <div class="input-field first-wrap">
-                                        <div class="input-select">
-                                            <select id="category" data-trigger="" name="choices-single-defaul">
 
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="input-field first-wrap">
-                                        <div class="input-select">
-                                            <select id="airtime" data-trigger="" name="choices-single-defaul">
+                                          <div class="col-md-2">
 
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="input-field first-wrap">
-                                        <div class="input-select">
-                                            <select id="price" data-trigger="" name="choices-single-defaul">
+                                            <button onclick="filterUav()" type="button" class="btn btn-primary"><i
+                                                    class="bi bi-search"></i></button>
 
-                                            </select>
                                         </div>
-                                    </div>
-                                    <div class="input-field second-wrap">
-                                        <input id="search" type="text" placeholder="ARA"/>
-                                    </div>
-                                    <div class="input-field third-wrap">
-                                        <button class="btn-search" type="button">
-                                            <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true"
-                                                 data-prefix="fas" data-icon="search" role="img"
-                                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                                <path fill="currentColor"
-                                                      d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path>
-                                            </svg>
-                                        </button>
+                                        <div class="row mt-1">
+                                            <div class="col-md-10">
+                                                <input id="search" type="text" placeholder="ARA" style="width:100%"/>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <button onclick="searchUav()" type="button" class="btn btn-primary"><i
+                                                        class="bi bi-search"></i></button>
+                                            </div>
+                                        </div>
+
+
                                     </div>
                                 </div>
                             </form>
@@ -151,33 +143,6 @@
                         <div id="uav-card" class="row">
 
 
-                        </div>
-                    </div>
-                    <div class="modal fade" id="updateModal" tabindex="-1" role="dialog"
-                         aria-labelledby="updateModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <form id="updateForm">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="updateModalLabel">Update My Model</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <input type="hidden" id="id" name="id">
-                                        <div class="form-group">
-                                            <label for="name">Name:</label>
-                                            <input type="text" class="form-control" id="name" name="name">
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
-                                        </button>
-                                        <button type="submit" class="btn btn-primary">Save changes</button>
-                                    </div>
-                                </form>
-                            </div>
                         </div>
                     </div>
 
@@ -199,6 +164,9 @@
 
 
 
+
+
+
 </script>
 </html>
 <script>
@@ -215,9 +183,9 @@
       var select_air = $('#airtime');
       var select_price = $('#price');
       console.log(select_brand);
-      select_brand.empty();
         $.each(data, function(index, uav) {
-        console.log(uav.id)
+
+        console.log(uav)
         var uavCard = $('<div class="col-md-4 my-3">\
                           <div class="booking-form">\
                             <div class="uav-card">\
@@ -240,10 +208,27 @@
                           </div>\
                         </div>');
       div.append(uavCard);
-        select_brand.append($('<option>', {
-          value: uav['brand'],
-          text: uav['brand']
+         select_brand.append($('<option>', {
+          value: '+uav.brand+',
+          text: uav.brand
         }));
+        select_model.append($('<option>', {
+          value: '+uav.model+',
+          text: uav.model
+        }));
+        select_weight.append($('<option>', {
+          value: '+uav.weight+',
+          text: uav.weight
+        }));
+        select_cat.append($('<option>', {
+          value: '+uav.category+',
+          text: uav.category
+        }));
+        select_air.append($('<option>', {
+          value: '+uav.airtime+',
+          text: uav.airtime
+        }));
+
     });
   },
   error: function(error) {
@@ -267,11 +252,133 @@ headers: {
         }
     });
 }
+function searchUav() {
+    var search_input = $('#search');
+    var search_term = search_input.val();
+    console.log(search_term)
+    $.ajax({
+        url: '/api/uav/?search=' + search_term,
+        method: 'GET',
+        headers: {
+        'X-CSRFToken': document.querySelector('input[name="csrfmiddlewaretoken"]').value
+        },
+        success: function(data) {
+              var div = $('#uav-card');
+        var select_brand = $('#brand');
+        var select_model = $('#model');
+        var select_weight = $('#weight');
+        var select_cat = $('#category');
+        var select_air = $('#airtime');
+
+
+        div.empty();
+        select_brand.empty();
+        select_model.empty();
+        select_weight.empty();
+        select_cat.empty();
+        select_air.empty();
+        select_price.empty();
+        $.each(data, function(index, uav) {
+        console.log("uav.id");
+        var uavCard = $('<div class="col-md-4 my-3">\
+                          <div class="booking-form">\
+                            <div class="uav-card">\
+                            <img src="' + uav.img + '" height="150px" width="150px">\
+                              <hr>\
+                              <h1>' + uav.brand + '</h1>\
+                              <hr>\
+                              <h3>' + uav.model + '</h3>\
+                              <hr>\
+                              <h3>' + uav.weight + '</h3>\
+                              <hr>\
+                              <h3>' + uav.category + '</h3>\
+                              <hr>\
+                              <h3>' + uav.airtime + '</h3>\
+                              <hr>\
+                              <h3>' + uav.price + '</h3>\
+                            </div>\
+                            <button type="button" onclick="deleteMyModel('+uav.id+')" class="btn btn-danger"><i class="bi bi-trash"></i> Sil </button>\
+                            <a href="/putuav/'+uav.id+'" ><button type="button" class="btn btn-primary"><i class="bi bi-pen"></i> Düzenle </button></a>\
+                          </div>\
+                        </div>');
+      div.append(uavCard);
 
 
 
+    });
+        },
+        error: function() {
+            alert('Bir hata oluştu. Öğe silinemedi.');
+        }
+    });
+}
+function filterUav() {
+  // formdaki input elementlerinden verileri alın
+  var brand = $("#brand option:selected").text();
+  var model = $("#model option:selected").text();
+  var weight = $("#weight option:selected").text();
+  var cat = $("#category option:selected").text();
+  var air = $("#airtime option:selected").text();
+  var price = $("#price option:selected").text();
+
+  $.ajax({
+    url: '/api/uav/' + '?brand=' +brand+ '&model=' + model + '&weight=' + weight + '&category=' +cat + '&airtime='+ air ,
+    method: "GET",
+    dataType: "json",
+  success: function(data) {
+              var div = $('#uav-card');
+        var select_brand = $('#brand');
+        var select_model = $('#model');
+        var select_weight = $('#weight');
+        var select_cat = $('#category');
+        var select_air = $('#airtime');
+    var select_price = $('#price');
+
+
+        div.empty();
+        select_brand.empty();
+        select_model.empty();
+        select_weight.empty();
+        select_cat.empty();
+        select_air.empty();
+        select_price.empty();
+        $.each(data, function(index, uav) {
+        console.log("uav.id");
+        var uavCard = $('<div class="col-md-4 my-3">\
+                          <div class="booking-form">\
+                            <div class="uav-card">\
+                            <img src="' + uav.img + '" height="150px" width="150px">\
+                              <hr>\
+                              <h1>' + uav.brand + '</h1>\
+                              <hr>\
+                              <h3>' + uav.model + '</h3>\
+                              <hr>\
+                              <h3>' + uav.weight + '</h3>\
+                              <hr>\
+                              <h3>' + uav.category + '</h3>\
+                              <hr>\
+                              <h3>' + uav.airtime + '</h3>\
+                              <hr>\
+                              <h3>' + uav.price + '</h3>\
+                            </div>\
+                            <button type="button" onclick="deleteMyModel('+uav.id+')" class="btn btn-danger"><i class="bi bi-trash"></i> Sil </button>\
+                            <a href="/putuav/'+uav.id+'" ><button type="button" class="btn btn-primary"><i class="bi bi-pen"></i> Düzenle </button></a>\
+                          </div>\
+                        </div>');
+      div.append(uavCard);
+
+
+
+    });
+        },
+    error: function(error) {
+      console.error(error);
+    }
+  });
+}
 
 
 
 
 </script>
+
